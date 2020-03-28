@@ -2,14 +2,18 @@
 
 import { execReducer } from '../utils'
 import { userActions } from 'reduxStore/actions/user'
+import updaters from './updaters'
 
 const handlers = {
-    [userActions.fetching]: '',
-    [userActions.fetch]: '',
-    [userActions.failed]: '',
+    [userActions.fetching]: updaters.fetching,
+    [userActions.fetch]: updaters.fetch,
+    [userActions.failed]: updaters.failed,
 }
 
-const initialState = null
+const initialState: IUserState = {
+    data: null,
+    isFetching: false,
+}
 
 const userReducer = (
     draft: IProjectState = initialState,

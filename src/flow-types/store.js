@@ -1,7 +1,7 @@
 // @flow
 
 declare type IProjectState = {
-    currentUser: IUser,
+    currentUser: IUserState,
 }
 
 declare type IUser = {
@@ -9,4 +9,9 @@ declare type IUser = {
     name: string,
     surname: string,
     email: string,
+}
+
+declare type IUserState = {
+    data: ?IUser,
+    isFetching: boolean,
 }

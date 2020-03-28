@@ -1,5 +1,11 @@
 // @flow
 
-export const getApp = (state: IProjectState): IProjectState => state
+export const getState = (state: IProjectState): IProjectState => state
 
-export const getCurrentUser = (state: IProjectState): IUser => state.currentUser
+// User
+export const getCurrentUserState = (state: IProjectState): IUserState =>
+    getState(state).currentUser
+export const getCurrentUserData = (state: IProjectState): IUserState =>
+    getCurrentUserState(state).data
+export const getCurrentUserIsFetching = (state: IProjectState): IUserState =>
+    getCurrentUserState(state).isFetching

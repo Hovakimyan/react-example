@@ -8,6 +8,7 @@ declare type ICurrentUserFetching = {
 
 declare type ICurrentUserFetch = {
     type: 'FETCH_USER',
+    payload: IUser,
 }
 
 declare type ICurrentUserFailed = {

@@ -1,7 +1,7 @@
 // @flow
 
 export const apiFetchCurrentUser = (id: number) => {
-    return Promise.resolve(() => {
+    return Promise.resolve((): APIReturnType<IUser> => {
         return {
             status: 200,
             data: {
