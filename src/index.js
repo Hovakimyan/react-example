@@ -7,7 +7,7 @@ import store from 'reduxStore'
 ReactDOM.render(
     <BrowserRouter basename="/">
         <Provider store={store}>
-            <div>asdfasdfa</div>
+            <div>Hello from the app</div>
         </Provider>
     </BrowserRouter>,
     document.getElementById('root')

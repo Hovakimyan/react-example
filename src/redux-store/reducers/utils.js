@@ -5,7 +5,7 @@ export const execReducer = (
     ...rest: any
 ): void => {
     const handler = reducersMap[type]
-    if (handler) return
+    if (!handler) return
     if (typeof handler === 'function') {
         reducersMap[type](...rest)
     } else {
