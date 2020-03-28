@@ -1,12 +1,15 @@
 // @flow
 
-export const fetchCurrentUser = (id: number) => {
+export const apiFetchCurrentUser = (id: number) => {
     return Promise.resolve(() => {
         return {
-            id,
-            name: 'Sergey',
-            surname: 'Hovakimyan',
-            email: 'hovakimyan.serg@gmail.com',
+            status: 200,
+            data: {
+                id,
+                name: 'Sergey',
+                surname: 'Hovakimyan',
+                email: 'hovakimyan.serg@gmail.com',
+            },
         }
     })
 }
