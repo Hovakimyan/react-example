@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-example",
   "version": "1.0.0",
-  "description": "boilerplate for react apps",
+  "description": "example for react apps",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
