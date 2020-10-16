@@ -15,9 +15,9 @@ module.exports = {
                     constants: './src/constants',
                     helpers: './src/helpers',
                     pages: './src/pages',
-                    api: './src/api'
-                }
-            }
-        ]
-    ]
+                    api: './src/api',
+                },
+            },
+        ],
+    ],
 }
