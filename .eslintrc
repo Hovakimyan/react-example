@@ -38,10 +38,10 @@
     "import/resolver": {
       "alias": [
         ["api", "./src/api"],
+        ["pages", "./src/pages"],
         ["helpers", "./src/helpers"],
         ["constants", "./src/constants"],
         ["components", "./src/components"],
-        ["containers", "./src/containers"],
         ["reduxStore", "./src/redux-store"]
       ]
     }

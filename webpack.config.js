@@ -22,24 +22,16 @@ module.exports = {
                         loader: 'html-loader'
                     }
                 ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'css-loader'
-                    }
-                ]
             }
         ]
     },
     resolve: {
         alias: {
             api: path.resolve(__dirname, 'src/api'),
-            constants: path.resolve(__dirname, 'src/constants'),
-            containers: path.resolve(__dirname, 'src/containers'),
-            components: path.resolve(__dirname, 'src/components'),
+            pages: path.resolve(__dirname, 'src/pages'),
             helpers: path.resolve(__dirname, 'src/helpers'),
+            constants: path.resolve(__dirname, 'src/constants'),
+            components: path.resolve(__dirname, 'src/components'),
             reduxStore: path.resolve(__dirname, 'src/redux-store')
         }
     },
@@ -59,7 +51,7 @@ module.exports = {
         contentBase: './dist',
         disableHostCheck: true,
         historyApiFallback: true,
-        port: 1234,
+        port: 8000,
         hot: true
     }
 }

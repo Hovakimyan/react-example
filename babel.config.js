@@ -12,9 +12,9 @@ module.exports = {
                 alias: {
                     reduxStore: './src/redux-store',
                     components: './src/components',
-                    containers: './src/containers',
                     constants: './src/constants',
                     helpers: './src/helpers',
+                    pages: './src/pages',
                     api: './src/api'
                 }
             }
