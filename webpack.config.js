@@ -23,12 +23,21 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ],
     },
     resolve: {
         alias: {
             api: path.resolve(__dirname, 'src/api'),
             pages: path.resolve(__dirname, 'src/pages'),
+            assets: path.resolve(__dirname, 'src/assets'),
             helpers: path.resolve(__dirname, 'src/helpers'),
             constants: path.resolve(__dirname, 'src/constants'),
             components: path.resolve(__dirname, 'src/components'),

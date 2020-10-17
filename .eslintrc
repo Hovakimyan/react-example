@@ -39,6 +39,7 @@
       "alias": [
         ["api", "./src/api"],
         ["pages", "./src/pages"],
+        ["assets", "./src/assets"],
         ["helpers", "./src/helpers"],
         ["constants", "./src/constants"],
         ["components", "./src/components"],

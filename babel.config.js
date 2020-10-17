@@ -14,6 +14,7 @@ module.exports = {
                     components: './src/components',
                     constants: './src/constants',
                     helpers: './src/helpers',
+                    assets: './src/assets',
                     pages: './src/pages',
                     api: './src/api',
                 },

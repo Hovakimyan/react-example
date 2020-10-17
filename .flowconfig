@@ -14,6 +14,7 @@
 [options]
 module.name_mapper='^api' ->'<PROJECT_ROOT>/src/api'
 module.name_mapper='^pages' ->'<PROJECT_ROOT>/src/pages'
+module.name_mapper='^assets' ->'<PROJECT_ROOT>/src/assets'
 module.name_mapper='^constants' ->'<PROJECT_ROOT>/src/constants'
 module.name_mapper='^components' ->'<PROJECT_ROOT>/src/components'
 module.name_mapper='^helpers' ->'<PROJECT_ROOT>/src/helpers'
