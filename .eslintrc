@@ -1,11 +1,10 @@
 {
+  "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:flowtype/recommended",
-    "plugin:react/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
   ],
   "globals": {
     "GLOBALS": false,
@@ -17,12 +16,13 @@
     "shallow": false
   },
   "plugins": [
+    "@typescript-eslint",
+    "import",
     "react",
-    "flowtype",
     "prettier"
   ],
-  "parser": "babel-eslint",
   "parserOptions": {
+    "tsconfigRootDir": "./",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
@@ -36,22 +36,13 @@
   },
   "settings": {
     "import/resolver": {
-      "alias": [
-        ["api", "./src/api"],
-        ["pages", "./src/pages"],
-        ["assets", "./src/assets"],
-        ["helpers", "./src/helpers"],
-        ["constants", "./src/constants"],
-        ["components", "./src/components"],
-        ["reduxStore", "./src/redux-store"]
-      ]
+      "typescript": {}
     }
   },
   "rules": {
-    "flowtype/space-after-type-colon": [ 2, "always", { "allowLineBreak": true } ],
     "no-prototype-builtins": 0,
     "react/display-name": 0,
-    "flowtype/generic-spacing": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "@typescript-eslint/no-var-requires": "off"
   }
 }

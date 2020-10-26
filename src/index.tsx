@@ -1,14 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import store from 'reduxStore'
+import reducer from 'redux-store/reducers'
+import { configureStore } from '@reduxjs/toolkit'
 import Root from 'pages/root'
 import { ResetStyles } from './reset'
 
 ReactDOM.render(
     <BrowserRouter basename="/">
-        <Provider store={store}>
+        <Provider store={configureStore({ reducer })}>
             <ResetStyles />
             <Root />
         </Provider>

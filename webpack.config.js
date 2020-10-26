@@ -2,18 +2,13 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(ts|js)x?$/,
+                use: 'ts-loader',
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
-                    },
-                },
             },
             {
                 test: /\.html$/,
@@ -34,6 +29,7 @@ module.exports = {
         ],
     },
     resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
         alias: {
             api: path.resolve(__dirname, 'src/api'),
             pages: path.resolve(__dirname, 'src/pages'),
@@ -41,7 +37,7 @@ module.exports = {
             helpers: path.resolve(__dirname, 'src/helpers'),
             constants: path.resolve(__dirname, 'src/constants'),
             components: path.resolve(__dirname, 'src/components'),
-            reduxStore: path.resolve(__dirname, 'src/redux-store'),
+            'redux-store': path.resolve(__dirname, 'src/redux-store'),
         },
     },
     plugins: [
@@ -50,7 +46,7 @@ module.exports = {
             filename: './index.html',
         }),
     ],
-    entry: path.resolve(__dirname, 'src/index.js'),
+    entry: path.resolve(__dirname, 'src/index.tsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
