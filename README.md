@@ -6,7 +6,7 @@
 -   Babel
 -   Eslint
 -   Prettier
--   Flow
+-   Typescript
 
 Pre-commit hook is activated and will check Eslint, Prettier, and commit message style before committing
 
